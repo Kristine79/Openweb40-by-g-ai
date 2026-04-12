@@ -35,7 +35,7 @@ export default function Footer() {
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Надёжный и быстрый интернет для вашего загородного дома. Решаем проблемы со связью там, где другие сдаются.
             </p>
-            <a href="tel:+79105954668" className="inline-flex items-center gap-2 text-white font-semibold hover:text-primary transition-colors" data-testid="link-footer-phone">
+            <a href="tel:+79105954668" className="inline-flex items-center gap-2 text-white font-semibold hover:text-primary transition-colors whitespace-nowrap" data-testid="link-footer-phone">
               <Phone className="w-4 h-4 text-primary" />
               +7 (910) 595-46-68
             </a>
@@ -91,22 +91,21 @@ export default function Footer() {
           </div>
 
           {/* Menu */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-base font-semibold text-white mb-6">Меню</h3>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               {[...pages, ...anchors.map(a => ({ href: `/#${a.id}`, label: a.label }))].map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-white transition-colors text-sm group"
-                    data-testid={`footer-link-${item.href.replace(/[^a-z0-9]/g, '-')}`}
-                  >
-                    <ArrowRight className="w-3.5 h-3.5 text-primary group-hover:translate-x-1 transition-transform" />
-                    {item.label}
-                  </a>
-                </li>
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-white transition-colors text-sm group"
+                  data-testid={`footer-link-${item.href.replace(/[^a-z0-9]/g, '-')}`}
+                >
+                  <ArrowRight className="w-3 h-3 text-primary group-hover:translate-x-1 transition-transform shrink-0" />
+                  <span className="truncate">{item.label}</span>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
