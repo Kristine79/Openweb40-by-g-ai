@@ -1,20 +1,70 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Openweb40.ru - Интернет для загородных домов
 
-# Run and deploy your AI Studio app
+Стабильный высокоскоростной интернет для дачи, коттеджа и деревни в Калужской области. Профессиональная установка систем 4G/5G агрегации, спутникового интернета и Mesh Wi-Fi сетей.
 
-This contains everything you need to run your app locally.
+## 🚀 Особенности проекта
 
-View your app in AI Studio: https://ai.studio/apps/79abef87-505d-4ba9-a8ac-9ffa5fc60fb5
+- **Современный стек**: React 18 + Vite + TypeScript.
+- **Стильный дизайн**: Использование Tailwind CSS и компонентов shadcn/ui.
+- **Интерактивность**: Плавные анимации с помощью Framer Motion.
+- **Адаптивность**: Полная поддержка мобильных устройств, планшетов и десктопов.
+- **Функциональность**:
+    - Калькулятор стоимости подключения.
+    - Интерактивная карта зоны обслуживания (Яндекс.Карты).
+    - Блог с SEO-оптимизированными статьями.
+    - Портфолио выполненных работ.
+    - Многошаговая форма заявки.
 
-## Run Locally
+## 🛠 Технологический стек
 
-**Prerequisites:**  Node.js
+- **Frontend**: [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)
+- **Сборка**: [Vite](https://vitejs.dev/)
+- **Стилизация**: [Tailwind CSS](https://tailwindcss.com/)
+- **Библиотека компонентов**: [shadcn/ui](https://ui.shadcn.com/)
+- **Иконки**: [Lucide React](https://lucide.dev/)
+- **Анимации**: [Framer Motion](https://www.framer.com/motion/)
+- **Роутинг**: [wouter](https://github.com/molecula-js/wouter)
+- **Управление состоянием/запросами**: [TanStack Query (React Query)](https://tanstack.com/query/latest)
 
+## 📦 Установка и запуск
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Предварительные требования
+
+Убедитесь, что у вас установлен [Node.js](https://nodejs.org/) (рекомендуется версия 18 или выше) и менеджер пакетов `pnpm` (рекомендуется) или `npm`.
+
+### Шаги по установке
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone <url-вашего-репозитория>
+   cd <имя-папки-проекта>
+   ```
+
+2. Установите зависимости из корня:
+   ```bash
+   pnpm install
+   ```
+
+3. Запустите лендинг в режиме разработки:
+   ```bash
+   pnpm --filter @workspace/internet-landing dev
+   ```
+
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+
+## 🏗 Структура проекта
+
+Проект организован как монорепозиторий:
+
+- `/artifacts/internet-landing` — Основное приложение (лендинг).
+- `/package.json` — Корневой файл конфигурации.
+
+### Основные папки лендинга:
+- `src/components/sections` — Основные блоки лендинга (Hero, Тарифы, FAQ и т.д.).
+- `src/components/ui` — Переиспользуемые UI-компоненты (кнопки, инпуты, аккордеоны).
+- `src/pages` — Страницы приложения (Главная, Портфолио, Блог).
+- `src/index.css` — Глобальные стили и конфигурация Tailwind.
+
+## 📝 Лицензия
+
+Этот проект создан в рамках разработки для Openweb40.ru. Все права на контент и торговую марку принадлежат владельцу.
